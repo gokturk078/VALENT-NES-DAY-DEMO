@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>💕 Seni Seviyorum Ayşe | Sevgililer Günü 2025</title>
+    <meta name="description" content="Aşkımıza özel romantik bir yolculuk - Sonsuza dek seninle">
+    <meta name="theme-color" content="#DC143C">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>">
+
+    <!-- CDN Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#DC143C',
+                        secondary: '#FF1493',
+                        accent: '#B76E79',
+                        glow: '#FFB6C1',
+                        highlight: '#F7E7CE',
+                        dark: '#1A0A0A',
+                        light: '#FAFAFA',
+                        rose: '#E8A0B5',
+                        gold: '#D4AF37'
+                    },
+                    fontFamily: {
+                        script: ['Pinyon Script', 'cursive'],
+                        vibes: ['Great Vibes', 'cursive'],
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Lato', 'sans-serif'],
+                        dancing: ['Dancing Script', 'cursive'],
+                        elegant: ['Cormorant Garamond', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark text-light overflow-x-hidden">
+    <!-- Rose Petals Animation -->
+    <div id="rose-petals"></div>
+
+    <!-- Floating Hearts Canvas -->
+    <canvas id="hearts-canvas" class="fixed inset-0 pointer-events-none z-40"></canvas>
+
+    <!-- INTRO SCREEN - First Impression -->
+    <div id="intro-screen" class="fixed inset-0 z-[9999] flex items-center justify-center bg-dark">
+        <div class="intro-content text-center">
+            <div class="intro-heart">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1 class="font-vibes text-4xl md:text-6xl text-highlight mt-8 intro-title">Sana Özel Bir Sürpriz...</h1>
+            <p class="font-dancing text-xl text-glow mt-4 intro-subtitle">Müziği açmak için dokun</p>
+            <button id="start-experience" class="start-btn mt-8">
+                <span class="btn-text">
+                    <i class="fas fa-play mr-2"></i>Başla
+                </span>
+                <span class="btn-glow"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- SECTION 1: HERO -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="./images/Gemini_Generated_Image_rmu1p0rmu1p0rmu1.png" alt="Romantic Background"
+                class="w-full h-full object-cover hero-bg-img">
+            <div class="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/20 to-dark"></div>
+        </div>
+        <div class="hero-gradient"></div>
+        <div class="hero-sparkles"></div>
+        <div class="hero-content relative z-10 text-center px-4 py-20">
+            <div class="floating-hearts-mini"></div>
+            <p
+                class="font-elegant text-lg md:text-xl text-rose tracking-[0.3em] uppercase mb-4 opacity-0 hero-pretitle">
+                Sevgililer Günü 2025</p>
+            <h1 class="font-vibes text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-highlight hero-title">
+                Seni Seviyorum
+            </h1>
+            <p class="font-script text-3xl sm:text-4xl md:text-6xl text-glow mt-4 mb-6 hero-subtitle">Ayşe</p>
+            <div class="hero-divider"></div>
+            <p
+                class="font-dancing text-lg sm:text-xl md:text-2xl text-white/80 max-w-xl mx-auto mt-6 hero-tagline px-4">
+                "Her anımız bir masal, her bakışın bir şiir, seninle her gün aşka yeniden başlamak..."
+            </p>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="font-body text-xs text-white/50 tracking-widest uppercase">Keşfet</span>
+        </div>
+        <div class="hero-bottom-fade"></div>
+    </section>
+
+    <!-- SECTION 2: LOVE TIMELINE -->
+    <section id="love-counter" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="ambient-glow ambient-glow-1"></div>
+        <div class="ambient-glow ambient-glow-2"></div>
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="font-elegant text-rose tracking-[0.2em] uppercase text-sm mb-2">Birlikte</p>
+                <h2 class="font-vibes text-4xl md:text-6xl text-highlight">Aşkımızın Hikayesi</h2>
+            </div>
+            <div class="love-stats-grid">
+                <div class="love-stat-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                    <div class="stat-number" id="days-count">0</div>
+                    <div class="stat-label">Gün Birlikte</div>
+                </div>
+                <div class="love-stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon"><i class="fas fa-moon"></i></div>
+                    <div class="stat-number" id="months-count">0</div>
+                    <div class="stat-label">Ay</div>
+                </div>
+                <div class="love-stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-number" id="years-count">0</div>
+                    <div class="stat-label">Yıl</div>
+                </div>
+                <div class="love-stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon"><i class="fas fa-infinity"></i></div>
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Sonsuza Dek</div>
+                </div>
+            </div>
+            <p class="font-dancing text-xl text-center text-rose mt-8" data-aos="fade-up" data-aos-delay="400">
+                20 Mart 2020'den beri kalbimdesin...
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 3: WHY I LOVE YOU -->
+    <section id="reasons" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="section-bg-pattern"></div>
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="font-elegant text-rose tracking-[0.2em] uppercase text-sm mb-2">Seni Sevmemin</p>
+                <h2 class="font-vibes text-4xl md:text-6xl text-highlight" data-aos="fade-up">Nedenleri</h2>
+            </div>
+            <div class="swiper reasons-swiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper" id="reasons-wrapper"></div>
+                <div class="swiper-pagination reasons-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: GALLERY -->
+    <section id="gallery" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="font-elegant text-rose tracking-[0.2em] uppercase text-sm mb-2">Bizim</p>
+                <h2 class="font-vibes text-4xl md:text-6xl text-highlight" data-aos="fade-up">Anılarımız</h2>
+            </div>
+            <div class="swiper gallery-swiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper" id="gallery-wrapper"></div>
+            </div>
+            <div class="swiper-pagination gallery-pagination mt-8"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: LOVE LETTER -->
+    <section id="love-letter" class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="font-elegant text-rose tracking-[0.2em] uppercase text-sm mb-2">Sana Özel</p>
+                <h2 class="font-vibes text-4xl md:text-6xl text-highlight" data-aos="fade-up">Aşk Mektubum</h2>
+            </div>
+            <div class="letter-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                <div class="letter-envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <div class="wax-seal"><i class="fas fa-heart"></i></div>
+                    </div>
+                </div>
+                <div class="letter-paper">
+                    <div class="paper-content">
+                        <p class="letter-date font-elegant text-accent">14 Şubat 2025</p>
+                        <p class="letter-greeting font-dancing text-2xl md:text-3xl text-dark">Canım Ayşe'm,</p>
+                        <div class="letter-body font-elegant text-dark/90" id="letter-text"></div>
+                        <p class="letter-signature font-vibes text-2xl md:text-3xl text-primary">
+                            Sonsuza dek senin,<br>Ahmet
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: ROSE BOUQUET GIFT -->
+    <section id="gift" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="ambient-glow ambient-glow-3"></div>
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-center mb-8">
+                <p class="font-elegant text-rose tracking-[0.2em] uppercase text-sm mb-2" data-aos="fade-up">Sana Özel
+                </p>
+                <h2 class="font-vibes text-4xl md:text-6xl text-highlight" data-aos="fade-up" data-aos-delay="100">Bir
+                    Sürprizim Var</h2>
+            </div>
+
+            <!-- Premium Bouquet Display -->
+            <div class="premium-bouquet-container" data-aos="zoom-in" data-aos-delay="200">
+                <div class="bouquet-glow"></div>
+                <img src="./images/premium_rose_bouquet.png" alt="Premium Gül Buketi" class="premium-bouquet-image"
+                    id="bouquet">
+
+                <!-- Floating Petals Effect -->
+                <div class="floating-petals" id="bouquet-petals"></div>
+            </div>
+
+            <!-- Elegant Gift Card -->
+            <div class="elegant-gift-card" data-aos="fade-up" data-aos-delay="400" id="gift-card">
+                <div class="card-decoration-top"></div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-heart"></i></div>
+                    <p class="font-dancing text-2xl md:text-3xl text-dark leading-relaxed">
+                        "Güller solar, mevsimler geçer...<br>
+                        Ama sana olan aşkım<br>
+                        <span class="text-primary font-bold">sonsuza dek</span> kalır."
+                    </p>
+                    <div class="card-signature">
+                        <p class="font-vibes text-2xl text-primary">— Ahmet</p>
+                    </div>
+                </div>
+                <div class="card-decoration-bottom"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: OUR SONG -->
+    <section id="our-song" class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="font-elegant text-rose tracking-[0.2em] uppercase text-sm mb-2">Bizim</p>
+                <h2 class="font-vibes text-4xl md:text-6xl text-highlight" data-aos="fade-up">Şarkımız</h2>
+            </div>
+            <div class="song-player-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="vinyl-section">
+                    <div class="vinyl-disc" id="vinyl-disc">
+                        <div class="vinyl-grooves"></div>
+                        <div class="vinyl-label">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="song-info-section">
+                    <h3 class="font-display text-xl md:text-2xl text-highlight">Sertab Erener</h3>
+                    <p class="font-dancing text-2xl md:text-3xl text-rose">Aşk</p>
+                    <p class="font-body text-white/50 text-sm">Akustik Versiyon</p>
+                    <div class="song-controls">
+                        <button class="song-play-btn" id="song-play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="song-progress">
+                        <div class="progress-bar" id="song-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: MY PROMISES -->
+    <section id="promises" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="section-bg-pattern"></div>
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="font-elegant text-rose tracking-[0.2em] uppercase text-sm mb-2">Sana Verdiğim</p>
+                <h2 class="font-vibes text-4xl md:text-6xl text-highlight" data-aos="fade-up">Sözlerim</h2>
+            </div>
+            <div class="promises-container" id="promises-container"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: VIDEO MESSAGE -->
+    <section id="video-message" class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="font-elegant text-rose tracking-[0.2em] uppercase text-sm mb-2">Sana Özel</p>
+                <h2 class="font-vibes text-4xl md:text-6xl text-highlight" data-aos="fade-up">Video Mesajım</h2>
+            </div>
+            <div class="video-theater" data-aos="zoom-in" data-aos-delay="200">
+                <div class="video-frame">
+                    <video id="love-video" playsinline webkit-playsinline
+                        poster="./images/Gemini_Generated_Image_xe24fcxe24fcxe24.png">
+                        <source src="./images/Couple_s_Joyful_Celebration_Video.mp4" type="video/mp4">
+                    </video>
+                    <button class="video-play-btn" id="video-play-btn">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                        <div class="play-ripple"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: STARRY SKY - Names in Stars -->
+    <section id="starry-sky" class="min-h-screen relative flex items-center justify-center overflow-hidden">
+        <div class="starry-background">
+            <div class="stars-layer stars-1"></div>
+            <div class="stars-layer stars-2"></div>
+            <div class="stars-layer stars-3"></div>
+            <div class="shooting-stars"></div>
+        </div>
+        <div class="starry-content relative z-20 text-center px-4">
+            <p class="font-elegant text-rose tracking-[0.4em] uppercase text-sm mb-4" data-aos="fade-up">Gökyüzünde
+                Yazılı</p>
+            <h2 class="font-vibes text-5xl sm:text-6xl md:text-8xl text-highlight star-glow" data-aos="zoom-in"
+                data-aos-delay="200">
+                Ahmet & Ayşe
+            </h2>
+            <div class="constellation-line" data-aos="scale-x" data-aos-delay="400"></div>
+            <p class="font-dancing text-2xl md:text-3xl text-glow mt-6" data-aos="fade-up" data-aos-delay="600">
+                "Yıldızlar bile kıskanır aşkımızı..."
+            </p>
+            <!-- Candle Animation -->
+            <div class="candles-container" data-aos="fade-up" data-aos-delay="800">
+                <div class="candle">
+                    <div class="flame">
+                        <div class="flame-inner"></div>
+                    </div>
+                    <div class="candle-body"></div>
+                </div>
+                <div class="candle candle-2">
+                    <div class="flame">
+                        <div class="flame-inner"></div>
+                    </div>
+                    <div class="candle-body"></div>
+                </div>
+                <div class="candle candle-3">
+                    <div class="flame">
+                        <div class="flame-inner"></div>
+                    </div>
+                    <div class="candle-body"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: FINALE with Fireworks -->
+    <section id="finale" class="min-h-screen relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="./images/Gemini_Generated_Image_wmrr2ewmrr2ewmrr.png" alt="Romantic Finale"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-dark/40"></div>
+        </div>
+        <!-- Fireworks Canvas -->
+        <canvas id="fireworks-canvas" class="absolute inset-0 z-10 pointer-events-none"></canvas>
+        <canvas id="finale-hearts" class="absolute inset-0 z-10"></canvas>
+        <div class="finale-content relative z-20 text-center px-4 py-20">
+            <div class="finale-badge" data-aos="zoom-in" id="finale-trigger">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2 class="font-vibes text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-highlight mt-8" data-aos="fade-up"
+                data-aos-delay="200">
+                Sonsuza Dek Seninle
+            </h2>
+            <div class="finale-quote" data-aos="fade-up" data-aos-delay="400">
+                <p class="font-dancing text-xl md:text-2xl text-white/80 max-w-lg mx-auto">
+                    "Gerçek aşk, birlikte yaşlanmayı hayal ettiğin kişidir."
+                </p>
+            </div>
+            <div class="finale-names" data-aos="fade-up" data-aos-delay="600">
+                <span class="font-vibes text-3xl md:text-4xl text-rose">Ahmet</span>
+                <span class="heart-divider"><i class="fas fa-heart"></i></span>
+                <span class="font-vibes text-3xl md:text-4xl text-rose">Ayşe</span>
+            </div>
+            <p class="font-elegant text-sm text-white/50 tracking-widest mt-4" data-aos="fade-up" data-aos-delay="800">
+                20.03.2020 • SONSUZA DEK
+            </p>
+            <!-- Confetti Button -->
+            <button class="confetti-btn mt-8" id="confetti-btn" data-aos="fade-up" data-aos-delay="1000">
+                <span class="btn-text"><i class="fas fa-gift mr-2"></i>Sürpriz!</span>
+                <span class="btn-sparkle"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- MUSIC PLAYER (Fixed) -->
+    <div class="music-player-fixed" id="music-player">
+        <audio id="bg-music" loop preload="auto">
+            <source src="./images/Sertab%20Erener%20-%20A%C5%9Fk%20(Akustik).mp3" type="audio/mpeg">
+        </audio>
+        <button class="music-toggle" id="music-toggle" aria-label="Müzik Aç/Kapat">
+            <div class="music-icon">
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="music-waves">
+                <span></span><span></span><span></span>
+            </div>
+        </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-12 relative bg-gradient-to-t from-dark to-transparent">
+        <div class="container mx-auto px-4 text-center">
+            <div class="footer-heart">
+                <i class="fas fa-heart"></i>
+            </div>
+            <p class="font-dancing text-xl text-rose mt-4">
+                Sonsuz sevgiyle hazırlandı
+            </p>
+            <p class="font-elegant text-sm text-white/40 mt-2">Ayşe için ♥</p>
+            <div class="share-buttons mt-8">
+                <button class="share-btn whatsapp" onclick="shareWhatsApp()" aria-label="WhatsApp'ta Paylaş">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+                <button class="share-btn copy" onclick="copyLink()" aria-label="Linki Kopyala">
+                    <i class="fas fa-link"></i>
+                </button>
+            </div>
+            <p class="font-body text-xs text-white/30 mt-8">© 2025 - Sevgililer Günü</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
